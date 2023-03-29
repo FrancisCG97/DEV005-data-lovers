@@ -1,0 +1,794 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #7F8462;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 3px solid #C9B8A7;
+  text-align: right !important;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 40px;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/background.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.textoHistoria {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: justify;
+  background-color: #7F8462;
+  opacity: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 820px;
+  height: 250px;
+  padding: 40px;
+  margin: auto;
+  overflow: auto;
+}
+
+.filmografia,
+.personajes {
+  /* Contenedor de toda la sección */
+  max-width: 1000px;
+  max-height: 455px;
+}
+
+.filtrosFilmografia,
+.filtroPersonajes {
+  max-width: 1425px;
+  max-height: 50px;
+}
+
+.filtroDirector,
+.filtroProductor,
+.filtroOrden,
+.filtroEspecie {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 15px;
+  font-weight: bold;
+  color: #4C362E;
+  position: absolute;
+  margin-left: -65px;
+  margin-top: auto;
+}
+
+.filtroDirector,
+.filtroEspecie {
+  left: 50%;
+}
+
+.filtroProductor {
+  left: 65%;
+}
+
+.filtroOrden {
+  left: 35%;
+}
+
+.imagenesFilmografia {
+  width: 1200px;
+  margin: 90px auto 0;
+  text-align: center;
+}
+
+.imagenesPersonajes {
+  width: 1400px;
+  margin: 90px auto 0;
+  text-align: center;
+}
+
+.peliculas {
+  /* Contenedor imágen, título, año y descripción */
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: justify;
+  background-color: #7F8462;
+  opacity: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  margin: 15px;
+  margin-top: 70px;
+  display: inline-flex;
+  vertical-align: top;
+  position: relative;
+}
+
+.posterPelicula {
+  max-width: 200px;
+  max-height: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+.personaje {
+  /* Contenedor imágen, género, edad y especie */
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: justify;
+  background-color: #7F8462;
+  opacity: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 330px;
+  height: 200px;
+  padding: 20px;
+  margin: 15px;
+  margin-top: 30px;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  float: left;
+  overflow: auto;
+}
+
+.posterPersonaje {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  float: left;
+}
+
+.descripcionPelicula,
+.datosPersonaje {
+  /* Descripción */
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: #ffffff;
+  text-align: justify;
+  margin-top: 15px;
+  max-width: 350px;
+  max-height: 100px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px 50px;
+}
+
+#numeroEspecies {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+  color: #ffffff;
+  text-align: justify;
+  margin-top: 15px;
+  max-width: 350px;
+  max-height: 100px;
+}
+
+/* BULLET */
+ul {
+  list-style: none;
+}
+
+/* BOTONES SELECCION SECCIONES */
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background-color: #7F8462;
+  color: #ffffff;
+  padding: 10px 20px 10px;
+  font-size: 16px;
+  border: 3px solid #C9B8A7;
+  text-align: right !important;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  margin-left: 0;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+button:hover {
+  background-color: rgb(76, 54, 46);
+}
+
+button:first-of-type {
+  margin-top: 305px;
+}
+
+/* BOTONES VOLVER */
+#botonVolver,
+#botonVolver2,
+#botonVolver3 {
+  text-align: center !important;
+  width: 110px;
+  justify-content: flex-start;
+  margin: 10px;
+  margin-left: 0;
+  float: left;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+#botonVolver:hover,
+#botonVolver2:hover,
+#botonVolver3:hover {
+  background-color: #4C362E;
+}
+
+/* MOSTRAR-OCULTAR SECCIONES */
+#header {
+  display: auto;
+}
+
+#historia {
+  display: none;
+}
+
+#filmografia {
+  display: none;
+}
+
+#personajes {
+  display: none;
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media screen and (max-width: 700px) {
+
+  h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 42px;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7F8462;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 3px solid #C9B8A7;
+    text-align: right !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 40px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url(./Imagenes/Tablet\ \(720x1280\).png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .textoHistoria {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    margin: 40px;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 450px;
+    height: 300px;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .filmografia,
+  .personajes {
+    /* Contenedor de toda la sección */
+    max-width: 700px;
+    max-height: 455px;
+  }
+
+  .filtrosFilmografia,
+  .filtroPersonajes {
+    max-width: 700px;
+    max-height: 50px;
+  }
+
+  .filtroDirector,
+  .filtroProductor,
+  .filtroOrden,
+  .filtroEspecie {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    border: 3px solid #4C362E;
+    border-radius: 8px;
+    background-color: #C9B8A7;
+    font-size: 11px;
+    font-weight: bold;
+    color: #4C362E;
+    position: absolute;
+    margin-left: -65px;
+    margin-top: auto;
+  }
+
+  .filtroDirector {
+    left: 90%;
+    top: 22%;
+  }
+
+  .filtroEspecie {
+    left: 90%;
+    top: 13%;
+  }
+
+  .filtroProductor {
+    left: 90%;
+    top: 15%;
+  }
+
+  .filtroOrden {
+    left: 90%;
+    top: 8%;
+  }
+
+  .imagenesFilmografia {
+    width: 1000px;
+    margin: 50px auto 0;
+    text-align: center;
+  }
+
+  .imagenesPersonajes {
+    width: 1400px;
+    margin: 50px auto 0;
+    text-align: center;
+  }
+
+  .peliculas {
+    /* Contenedor imágen, título, año y descripción */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 500px;
+    height: 220px;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 80px;
+    display: block;
+    position: relative;
+  }
+
+  .posterPelicula {
+    max-width: 250px;
+    max-height: 200px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .personaje {
+    /* Contenedor imágen, género, edad y especie */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 290px;
+    height: 180px;
+    padding: 20px;
+    margin: 16.5px;
+    margin-top: 20px;
+    display: flex;
+    overflow: auto;
+    clear: both;
+  }
+
+  .posterPersonaje {
+    max-width: 180px;
+    max-height: 200px;
+    float: left;
+    object-fit: fill;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px 50px;
+  }
+
+  .descripcionPelicula,
+  .datosPersonaje {
+    /* Descripción */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 12.5px;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 15px;
+    max-width: 500px;
+    max-height: 200px;
+  }
+
+  #numeroEspecies {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 15px;
+    max-width: 350px;
+    max-height: 100px;
+  }
+
+  /* BULLET */
+  ul {
+    list-style: none;
+  }
+
+  /* BOTONES SELECCION SECCIONES */
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7F8462;
+    color: #ffffff;
+    padding: 10px 20px 10px;
+    font-size: 15px;
+    border: 3px solid #C9B8A7;
+    text-align: right !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 170px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+    margin-left: 0;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  }
+
+  button:hover {
+    background-color: rgb(76, 54, 46);
+  }
+
+  button:first-of-type {
+    margin-top: 305px;
+  }
+
+  /* BOTONES VOLVER */
+  #botonVolver,
+  #botonVolver2,
+  #botonVolver3 {
+    text-align: center !important;
+    width: 110px;
+    justify-content: flex-start;
+    margin: 10px;
+    margin-left: 0;
+    float: left;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    position: top;
+  }
+
+}
+
+/* RESPONSIVE SMARTPHONE */
+
+@media screen and (max-width: 500px) {
+
+  h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7F8462;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 12px;
+    border: 3px solid #C9B8A7;
+    text-align: right !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 40px;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url(./Imagenes/Smartphone\ \(640x900\).png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .textoHistoria {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    margin: 30px;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 260px;
+    height: 340px;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  .textoPorcentaje {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+
+  }
+
+  .filtroDirector,
+  .filtroProductor,
+  .filtroOrden,
+  .filtroEspecie {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #4C362E;
+    border-radius: 8px;
+    background-color: #C9B8A7;
+    font-size: 9px;
+    font-weight: bold;
+    color: #4C362E;
+    position: absolute;
+    margin-left: -65px;
+    margin-top: auto;
+  }
+
+  .filtroDirector {
+    left: 90%;
+    top: 22%;
+  }
+
+  .filtroEspecie {
+    left: 90%;
+    top: 13%;
+  }
+
+  .filtroProductor {
+    left: 90%;
+    top: 15%;
+  }
+
+  .filtroOrden {
+    left: 90%;
+    top: 8%;
+  }
+
+  .imagenesFilmografia {
+    width: 1200px;
+    margin: 90px auto 0;
+    text-align: center;
+  }
+
+  .imagenesPersonajes {
+    width: 1400px;
+    margin: 90px auto 0;
+    text-align: center;
+  }
+
+  .peliculas {
+    /* Contenedor imágen, título, año y descripción */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 270px;
+    height: 320px;
+    padding: 20px;
+    margin: 13px;
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    overflow: auto;
+  }
+
+  .posterPelicula {
+    max-width: 250px;
+    max-height: 200px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .personaje {
+    /* Contenedor imágen, género, edad y especie */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: justify;
+    background-color: #7F8462;
+    opacity: 1;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid #C9B8A7;
+    width: 270px;
+    height: 200;
+    padding: 15px;
+    margin: 15x;
+    margin-top: 25px;
+    display: flex;
+    vertical-align: top;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .posterPersonaje {
+    max-width: 120px;
+    max-height: 150px;
+    object-fit: cover;
+    float: left;
+  }
+
+  .descripcionPelicula,
+  .datosPersonaje {
+    /* Descripción */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 15px;
+    margin-left: 10px;
+    max-width: 500px;
+    max-height: 100px;
+  }
+
+  #numeroEspecies {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 15px;
+    max-width: 350px;
+    max-height: 100px;
+  }
+
+  /* BULLET */
+  ul {
+    list-style: none;
+  }
+
+  /* BOTONES SELECCION SECCIONES */
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7F8462;
+    color: #ffffff;
+    padding: 10px 20px 10px;
+    font-size: 14px;
+    border: 3px solid #C9B8A7;
+    text-align: right !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+    margin-left: 0;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  }
+
+  button:hover {
+    background-color: rgb(76, 54, 46);
+  }
+
+  button:first-of-type {
+    margin-top: 305px;
+  }
+
+  /* BOTONES VOLVER */
+  #botonVolver,
+  #botonVolver2,
+  #botonVolver3 {
+    text-align: center !important;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    justify-content: flex-start;
+    margin: 10px;
+    margin-left: 0;
+    float: left;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    position: top;
+  }
+
+}
