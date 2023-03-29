@@ -1,6 +1,7 @@
 // FILTROS
+
 // Director
-export function filtroInformacionDirector(films, nombreDirector) {
+export function filtroInformacionDirector(films, nombreDirector) {  
   const resultadoDirector = films.filter((y) => y.director === nombreDirector);
   return resultadoDirector;
 }
@@ -38,6 +39,7 @@ export const ordenInformacion = (order, films) => {
   } else {
     const resultadoOrden = films.sort(fechaDescendente);
     return resultadoOrden;
+
   }
 };
 

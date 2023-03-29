@@ -3,6 +3,8 @@ import data from "./data/ghibli/ghibli.js";
 import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformacion, calculoInformacion } from './data.js';
 
 // SELECCION SECCION
+
+//HISTORIA
 const botonHistoria = document.getElementById("botonHistoria");
 const seccionHistoria = document.getElementById("historia");
 botonHistoria.addEventListener("click", function () {
@@ -165,7 +167,9 @@ function personajes(listaPersonajes) {
       </div>
     </div>`;
     matrizPersonajes.insertAdjacentHTML("beforeend", listadoFilmografia);
+    
   }
+  
 }
 const especiePersonajes = document.querySelector("#filtroEspecie");
 const c = new Set([]);
@@ -185,7 +189,7 @@ for (let i = 0; i < limpiarPersonajes.length; i++) {
 especiePersonajes.addEventListener('change', (e) => {
   const especieSeleccionada = filtroInformacionEspecie(listaPersonajes, e.target.value);
   const cantidadEspecie = calculoInformacion(data.films, e.target.value);
-  const mensajeCantidadEspecie = `<div><label>La cantidad de personajes de ésta especie es: ${cantidadEspecie}</label></div>`;
+  const mensajeCantidadEspecie = `<div><label>El porcentaje de ésta especie es: ${cantidadEspecie}%</label></div>`;
   const resultadoCantidadEspecie = document.getElementById("numeroEspecies");
   resultadoCantidadEspecie.innerHTML = mensajeCantidadEspecie;
   personajes(especieSeleccionada);
